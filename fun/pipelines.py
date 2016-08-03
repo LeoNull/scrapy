@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8 
 
 # Define your item pipelines here
 #
@@ -26,7 +26,7 @@ class ImageDownloadPipeline(object):
                     continue
 
                 with open(file_path, 'wb') as handle:
-                    response = requests.get(image_url, stream=True)
+                    response =requests.get(image_url, stream=True)
                     for block in response.iter_content(1024):
                         if not block:
                             break

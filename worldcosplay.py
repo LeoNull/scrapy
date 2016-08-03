@@ -19,7 +19,7 @@ def main(member_id, page=1, index=0):
 
         photo_data_list = data['list']
         if not photo_data_list:
-            print u'没东西了？第 %s 页，共下载了 %s 个图片' % (page, index - 1)
+            print u'没东西了？第 %s 页，共下载了 %s 个图�?' % (page, index - 1)
             exit(0)
         for photo_data in photo_data_list:
             url = photo_data['photo']['sq300_url']
@@ -33,10 +33,10 @@ def main(member_id, page=1, index=0):
             filename = '%s/%s_%s_%s.jpg' % (member_id, member_id, index, subject)
             try:
                 urllib.urlretrieve(url=url, filename=filename)
-                print u'下完了%s张' % (index + 1)
+                print u'下完�?%s�?' % (index + 1)
                 index += 1
             except Exception:
-                print(u'这张图片下载出问题了： %s' % url)
+                print(u'这张图片下载出问题了�? %s' % url)
 
         page += 1
         main(member_id, page=page, index=index)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from scrapy.contrib.loader import ItemLoader, Identity
+from scrapy.contrib.loader import ItemLoader
 from fun.items import CoserItem
 
 
